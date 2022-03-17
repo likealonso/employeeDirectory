@@ -31,7 +31,7 @@ public class EmployeeController {
     public String showFormForUpdate(@RequestParam("employeeId") int id, Model model){
         Optional<Employee> empl = emp.findById(id);
         model.addAttribute("employee", empl);
-        return "/employee-form";
+        return "employee-form";
     }
 
     @PostMapping("/save")
